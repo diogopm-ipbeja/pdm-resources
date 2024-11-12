@@ -129,24 +129,3 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-safeargs = { id = "androidx.navigation.safeargs.kotlin"}
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion"}
 ```
-
----
-### Outros
-`activity_main.xml` uma definição base para o layout da MainActivity utilizando o componente da navegação
-> Note que os atributos relacionados com a navegação só estarão disponíveis se configurou corretamente os ficheiros `build.gradle` e o ficheiro `libs.versions.toml`
-
-> Terá ainda de gerar o ficheiro do grafo de navegação se este não existir (alt+enter sobre @navigation/nav_graph)
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
-    android:name="androidx.navigation.fragment.NavHostFragment"
-    app:navGraph="@navigation/nav_graph"
-    app:defaultNavHost="true"/>
-```
