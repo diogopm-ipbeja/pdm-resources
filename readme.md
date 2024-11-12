@@ -3,10 +3,16 @@
 [build.gradle](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/projectConfiguration/build-gradle.md) - Alterações necessárias aos ficheiros build.gradle (project e module)
 
 [versões](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/projectConfiguration/libs.versions.toml) - Ficheiro de versões das bibliotecas e plugins
+
+
+## Snippets
+
+- [Listas](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/snippets/lists.md)
+- [MainActivity layout](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/activity-main-layout-md)
+- [Room Database](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/room-database.md)
  
 <br>
-<br>
-<br>
+
 
 ## Style
 ### [Material Design 3](https://m3.material.io/develop/android/mdc-android) Modular and customizable code for building Android products
