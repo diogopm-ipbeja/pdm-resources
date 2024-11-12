@@ -1,15 +1,15 @@
 # Recursos
 ## Configuração
-[build.gradle](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/projectConfiguration/build-gradle.md) - Alterações necessárias aos ficheiros build.gradle (project e module)
+[build.gradle](projectConfiguration/build-gradle.md) - Alterações necessárias aos ficheiros build.gradle (project e module)
 
-[versões](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/projectConfiguration/libs.versions.toml) - Ficheiro de versões das bibliotecas e plugins
+[versões](projectConfiguration/libs.versions.toml) - Ficheiro de versões das bibliotecas e plugins
 
 
 ## Snippets
 
-- [Listas](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/snippets/lists.md)
-- [MainActivity layout](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/activity-main-layout-md)
-- [Room Database](https://github.com/diogopm-ipbeja/pdm-resources/tree/main/room-database.md)
+- [Listas](snippets/lists.md)
+- [MainActivity layout](activity-main-layout-md)
+- [Room Database](room-database.md)
  
 <br>
 
