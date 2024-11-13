@@ -59,11 +59,12 @@ Os métodos abstratos devem estar anotados com o tipo de operação que se prete
 
 ### RoomDatabase
 
-A classe que representa a base de dados. Deve ser abstracta e sub-classe de RoomDatabase.
-
-Além disso é necessário anotar esta class com `@Database`. Ambos os argumentos `entities` e `version` são obrigatórios.
+A classe que representa a base de dados. Deve ser abstracta e sub-classe de RoomDatabase. Esta class deve estar anotada `@Database`. Ambos os argumentos `entities` e `version` são obrigatórios.
 
 No argumento `entities` passamos uma lista das classes que representam entidades da BD.
+
+Além disso, temos de declarar métodos abstratos para cada DAO que queremos expôr aos utilizadores desta class:
+- `abstract fun vehicleDao() : VehicleDao`
 
 ```kt
 @Database(entities = [Vehicle::class], version = 1)
