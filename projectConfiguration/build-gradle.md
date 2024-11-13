@@ -22,8 +22,7 @@ buildscript {
 plugins {
     alias(libs.plugins.android.application)a
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp) // se der um erro relacionado, apague esta linha e descomente a linha abaixo
-    // id("com.google.devtools.ksp")
+    id("com.google.devtools.ksp")
 }
 
 
