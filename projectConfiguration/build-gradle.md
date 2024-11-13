@@ -54,6 +54,7 @@ dependencies {
     // room (database)
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
     // others (nice-to-have)
