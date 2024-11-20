@@ -13,6 +13,12 @@
  
 <br>
 
+## Room Database
+[Save data in a local database using Room](https://developer.android.com/training/data-storage/room)
+- [Entities](https://developer.android.com/training/data-storage/room/defining-data)
+- [Data Access Object](https://developer.android.com/training/data-storage/room/accessing-data)
+- [Relationships](https://developer.android.com/training/data-storage/room/relationships)
+- [Async Queries](https://developer.android.com/training/data-storage/room/async-queries)
 
 ## Style
 ### [Material Design 3](https://m3.material.io/develop/android/mdc-android) Modular and customizable code for building Android products
