@@ -3,6 +3,8 @@
 <br>
 
 Exemplo de um `ViewHolder`
+
+Um ViewHolder guarda informação sobre um item da lista (a View, a posição na lista, etc.)
 ```kt
 class ContactViewHolder(view: View) : ViewHolder(view) {
 
@@ -36,6 +38,12 @@ class ContactViewHolder(view: View) : ViewHolder(view) {
 
 ---
 <br>
+
+## Adapters
+
+Os adapters são responsáveis por criar os itens da lista e por providenciar os dados que serão utilizados para preencher a View de cada item.
+
+⚠️ Os adapters NÃO colocam os itens na `RecyclerView`. Essa é a responsabilidade do LayoutManager associado à `RecyclerView` (LinearLayoutManager, GridLayoutManager, etc.)
 
 ### ListAdapter\<ItemType, ViewHolderType\>
 
