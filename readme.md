@@ -8,8 +8,8 @@
 ## Snippets
 
 - [Listas](snippets/lists.md)
-- [MainActivity layout](activity-main-layout-md)
-- [Room Database](room-database.md)
+- [MainActivity layout](snippets/activity-main-layout-md)
+- [Room Database](snippets/room-database.md)
  
 <br>
 
