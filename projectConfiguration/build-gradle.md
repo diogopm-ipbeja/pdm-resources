@@ -30,11 +30,11 @@ android {
     
     ...
 
-    compileSdk = 35 // <- mudar
+    compileSdk = 36
 
     defaultConfig {
         ...
-        targetSdk = 35 // <- mudar
+        targetSdk = 36
         ...
     }
     
