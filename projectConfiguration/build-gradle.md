@@ -20,7 +20,7 @@ buildscript {
 `build.gradle (Module)`
 ```kt
 plugins {
-    alias(libs.plugins.android.application)a
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.devtools.ksp")
 }
