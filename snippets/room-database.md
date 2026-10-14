@@ -1,3 +1,5 @@
+> ℹ️ Este exemplo usa o **Room 2.x**. Para a versão com Room 3 e as diferenças, ver [Room 3](room3-database.md).
+
 ### Entity
 
 A definição desta classe anotada com `@Entity` resulta numa tabela com o nome da class. As propriedades desta class traduzem-se em colunas dessa tabela.

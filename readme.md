@@ -10,6 +10,7 @@
 - [Listas](snippets/lists.md)
 - [MainActivity layout](snippets/activity-main-layout.md)
 - [Room Database](snippets/room-database.md)
+- [Room 3 (diferenças para o Room 2)](snippets/room3-database.md)
  
 <br>
 
@@ -19,7 +20,7 @@
 - [Data Access Object](https://developer.android.com/training/data-storage/room/accessing-data)
 - [Relationships](https://developer.android.com/training/data-storage/room/relationships)
 - [Async Queries](https://developer.android.com/training/data-storage/room/async-queries)
-- [Room 3](https://developer.android.com/jetpack/androidx/releases/room3) (nova versão, pacote `androidx.room3` — estes recursos usam o Room 2.x)
+- [Room 3](https://developer.android.com/jetpack/androidx/releases/room3) (nova versão, pacote `androidx.room3` — estes recursos usam o Room 2.x; ver [diferenças](snippets/room3-database.md))
 
 ## Style
 ### [Material Design 3](https://m3.material.io/develop/android/mdc-android) Modular and customizable code for building Android products
