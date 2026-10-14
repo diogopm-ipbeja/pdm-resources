@@ -11,6 +11,7 @@
 - [MainActivity layout](snippets/activity-main-layout.md)
 - [Room Database](snippets/room-database.md)
 - [Room 3 (diferenças para o Room 2)](snippets/room3-database.md)
+- [Coroutines](snippets/coroutines.md)
  
 <br>
 

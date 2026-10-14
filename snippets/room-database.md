@@ -101,4 +101,4 @@ abstract class AppDatabase : RoomDatabase() {
 }
 ```
 
-> ⚠ `allowMainThreadQueries()` serve apenas para simplificar os exemplos. Numa app real as queries não devem correr na thread principal: o Room 2 também suporta funções `suspend` e `Flow` no DAO (ver [Async Queries](https://developer.android.com/training/data-storage/room/async-queries) ou o exemplo do [Room 3](room3-database.md#utilizar-o-dao-num-fragment), que funciona da mesma forma no Room 2).
+> ⚠ `allowMainThreadQueries()` serve apenas para simplificar os exemplos. Numa app real as queries não devem correr na thread principal: o Room 2 também suporta funções `suspend` e `Flow` no DAO (ver [Coroutines](coroutines.md#room), [Async Queries](https://developer.android.com/training/data-storage/room/async-queries) ou o exemplo do [Room 3](room3-database.md#utilizar-o-dao-num-fragment), que funciona da mesma forma no Room 2).
