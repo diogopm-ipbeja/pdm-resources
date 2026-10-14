@@ -1,6 +1,6 @@
 # Recursos
 ## Configuração
-[build.gradle](projectConfiguration/build-gradle.md) - Alterações necessárias aos ficheiros build.gradle (project e module)
+[build.gradle.kts](projectConfiguration/build-gradle.md) - Alterações necessárias aos ficheiros build.gradle.kts (project e module)
 
 [versões](projectConfiguration/libs.versions.toml) - Ficheiro de versões das bibliotecas e plugins
 
@@ -8,7 +8,7 @@
 ## Snippets
 
 - [Listas](snippets/lists.md)
-- [MainActivity layout](snippets/activity-main-layout-md)
+- [MainActivity layout](snippets/activity-main-layout.md)
 - [Room Database](snippets/room-database.md)
  
 <br>
@@ -19,6 +19,7 @@
 - [Data Access Object](https://developer.android.com/training/data-storage/room/accessing-data)
 - [Relationships](https://developer.android.com/training/data-storage/room/relationships)
 - [Async Queries](https://developer.android.com/training/data-storage/room/async-queries)
+- [Room 3](https://developer.android.com/jetpack/androidx/releases/room3) (nova versão, pacote `androidx.room3` — estes recursos usam o Room 2.x)
 
 ## Style
 ### [Material Design 3](https://m3.material.io/develop/android/mdc-android) Modular and customizable code for building Android products

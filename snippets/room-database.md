@@ -67,7 +67,7 @@ Além disso, temos de declarar métodos abstratos para cada DAO que queremos exp
 - `abstract fun vehicleDao() : VehicleDao`
 
 ```kt
-@Database(entities = [Vehicle::class], version = 1)
+@Database(entities = [Vehicle::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun vehicleDao() : VehicleDao
@@ -87,7 +87,7 @@ abstract class AppDatabase : RoomDatabase() {
 
                 instance = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, "app.db")
                     .allowMainThreadQueries()
-                    .fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
 
                 return instance!!
