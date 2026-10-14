@@ -11,8 +11,11 @@ Layout `activity_main.xml` para utilização com o Navigation component.
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
+    tools:context=".MainActivity"
     android:name="androidx.navigation.fragment.NavHostFragment"
     app:navGraph="@navigation/nav_graph"
     app:defaultNavHost="true"/>
 ```
+> O id `main` é o mesmo que o template do Android Studio usa no `MainActivity` (`findViewById(R.id.main)` para aplicar as margens do edge-to-edge), por isso não é preciso alterar o código da Activity.
+>
+> Se a `MainActivity` estiver noutro package (ex.: `ui`), ajustar o `tools:context` (ex.: `.ui.MainActivity`).

@@ -6,33 +6,28 @@ Exemplo de um `ViewHolder`
 
 Um ViewHolder guarda informação sobre um item da lista (a View, a posição na lista, etc.)
 ```kt
-class ContactViewHolder(view: View) : ViewHolder(view) {
+class ContactViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private var contact: Contact? = null
-        private val binding = ContactListItemBinding.bind(view)
+    private var contact: Contact? = null
+    private val binding = ContactListItemBinding.bind(view)
 
-        init {
-
-
-            view.setOnClickListener {
-                // clique no item da lista
-            }
-
-            view.setOnLongClickListener {
-                
-                // clique longo no item da lista
-
-                return@setOnLongClickListener true
-            }
-
-
+    init {
+        view.setOnClickListener {
+            // clique no item da lista
         }
 
-        fun bind(contact: Contact) {
-            this.contact = contact
-            // colocar conteúdo nas Views
+        view.setOnLongClickListener {
+            // clique longo no item da lista
+
+            return@setOnLongClickListener true
         }
     }
+
+    fun bind(contact: Contact) {
+        this.contact = contact
+        // colocar conteúdo nas Views
+    }
+}
 ```
 <br>
 
@@ -60,6 +55,17 @@ class ContactsListAdapter : ListAdapter<Contact, ContactViewHolder>(differ) {
         val contact = getItem(position)
         holder.bind(contact)
     }
+}
+```
+
+O `ListAdapter` precisa de um `DiffUtil.ItemCallback` (o `differ` acima) para saber que itens mudaram quando é submetida uma nova lista com `submitList(...)`:
+```kt
+val differ = object : DiffUtil.ItemCallback<Contact>() {
+    // é o mesmo item? (normalmente compara-se o id)
+    override fun areItemsTheSame(oldItem: Contact, newItem: Contact) = oldItem.id == newItem.id
+
+    // o conteúdo do item mudou? (com data class, o == compara todas as propriedades)
+    override fun areContentsTheSame(oldItem: Contact, newItem: Contact) = oldItem == newItem
 }
 ```
 <br>
@@ -99,4 +105,5 @@ val adapter = TodoListAdapter()
 binding.todoList.adapter = adapter
 binding.todoList.layoutManager = LinearLayoutManager(requireContext())
 // se estiver a utilizar o ListAdapter pode submeter uma lista de dados com: adapter.submitList(...)
+// com o RecyclerView.Adapter, depois de alterar os dados chamar adapter.notifyDataSetChanged() (ou notifyItemInserted/Removed/Changed)
 ```

@@ -115,7 +115,7 @@ interface VehicleDao {
     fun observeAll() : Flow<List<Vehicle>> // sem suspend: emite uma nova lista sempre que a tabela muda
 
     @Query("select * from vehicle where id = :id")
-    suspend fun get(id: Long) : Vehicle
+    suspend fun get(id: Long) : Vehicle? // null se não existir (com `Vehicle` dá erro quando o id não existe)
 
     @Insert
     suspend fun insert(vehicle: Vehicle) : Long // devolve o id automaticamente gerado se a primary key tiver autoGenerate a true

@@ -1,3 +1,5 @@
+# Room Database
+
 > ℹ️ Este exemplo usa o **Room 2.x**. Para a versão com Room 3 e as diferenças, ver [Room 3](room3-database.md).
 
 ### Entity
@@ -43,7 +45,7 @@ interface VehicleDao {
     fun getAll() : List<Vehicle>
 
     @Query("select * from vehicle where id = :id")
-    fun get(id: Long) : Vehicle
+    fun get(id: Long) : Vehicle? // null se não existir (com `Vehicle` dá erro quando o id não existe)
 
     @Insert
     fun insert(vehicle: Vehicle) : Long // devolve o id automaticamente gerado se a primary key tiver autoGenerate a true
@@ -88,7 +90,7 @@ abstract class AppDatabase : RoomDatabase() {
                 if(instance != null) return  instance!!
 
                 instance = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, "app.db")
-                    .allowMainThreadQueries()
+                    .allowMainThreadQueries() // só para simplificar: permite queries na thread principal (bloqueia a UI)
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
 
@@ -98,3 +100,5 @@ abstract class AppDatabase : RoomDatabase() {
     }
 }
 ```
+
+> ⚠ `allowMainThreadQueries()` serve apenas para simplificar os exemplos. Numa app real as queries não devem correr na thread principal: o Room 2 também suporta funções `suspend` e `Flow` no DAO (ver [Async Queries](https://developer.android.com/training/data-storage/room/async-queries) ou o exemplo do [Room 3](room3-database.md#utilizar-o-dao-num-fragment), que funciona da mesma forma no Room 2).
